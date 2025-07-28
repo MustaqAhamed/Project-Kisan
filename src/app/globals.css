@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 60% 93%;
+    --foreground: 120 25% 15%;
+    --card: 120 60% 98%;
+    --card-foreground: 120 25% 15%;
+    --popover: 120 60% 98%;
+    --popover-foreground: 120 25% 15%;
+    --primary: 120 57% 40%;
+    --primary-foreground: 120 25% 98%;
+    --secondary: 120 25% 85%;
+    --secondary-foreground: 120 25% 25%;
+    --muted: 120 25% 88%;
+    --muted-foreground: 120 25% 45%;
+    --accent: 43 89% 38%;
+    --accent-foreground: 43 25% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 120 25% 80%;
+    --input: 120 25% 88%;
+    --ring: 120 57% 40%;
+    --radius: 0.5rem;
+    --chart-1: 120 73% 40%;
+    --chart-2: 43 89% 45%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 120 30% 96%;
+    --sidebar-foreground: 120 25% 20%;
+    --sidebar-primary: 120 57% 40%;
+    --sidebar-primary-foreground: 120 25% 98%;
+    --sidebar-accent: 120 40% 90%;
+    --sidebar-accent-foreground: 120 25% 15%;
+    --sidebar-border: 120 25% 85%;
+    --sidebar-ring: 120 57% 40%;
+  }
+
+  .dark {
+    --background: 120 10% 10%;
+    --foreground: 120 10% 85%;
+    --card: 120 10% 12%;
+    --card-foreground: 120 10% 85%;
+    --popover: 120 10% 12%;
+    --popover-foreground: 120 10% 85%;
+    --primary: 120 73% 75%;
+    --primary-foreground: 120 25% 10%;
+    --secondary: 120 10% 20%;
+    --secondary-foreground: 120 10% 85%;
+    --muted: 120 10% 20%;
+    --muted-foreground: 120 10% 60%;
+    --accent: 43 74% 66%;
+    --accent-foreground: 43 25% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 120 10% 20%;
+    --input: 120 10% 20%;
+    --ring: 120 73% 75%;
+    --chart-1: 120 73% 75%;
+    --chart-2: 43 74% 66%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 120 10% 12%;
+    --sidebar-foreground: 120 10% 85%;
+    --sidebar-primary: 120 73% 75%;
+    --sidebar-primary-foreground: 120 25% 10%;
+    --sidebar-accent: 120 10% 20%;
+    --sidebar-accent-foreground: 120 10% 90%;
+    --sidebar-border: 120 10% 20%;
+    --sidebar-ring: 120 73% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .prose {
+    @apply text-foreground;
+  }
+  .prose :where(p):not(:where([class~="not-prose"] *)) {
+    @apply text-foreground;
+  }
+}
